@@ -38,6 +38,8 @@ def main():
         amount = len(words)
         print(f"There are {amount} words left")
         print(words)
+        if amount == 1:
+            sys.exit()
 
                 
 
