@@ -36,9 +36,17 @@ def main():
                     green_word[i] = word_input[i]
                     if word_input[i] != word[i]:
                         words.remove(word)
+        chars = {}
+        for word in words:
+            for i in range(0, 5):
+                if word[i] in chars:
+                    chars[word[i]] += 1
+                else:
+                    chars[word[i]] = 1
         amount = len(words)
         print(f"There are {amount} words left")
         print(words)
+        print(sorted(chars.items(), key=lambda item: item[1], reverse=True))
         if amount == 1:
             sys.exit()
 
