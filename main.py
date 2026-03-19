@@ -5,6 +5,7 @@ def main():
     with open("valid-wordle-words.txt") as f:
         for x in f:
             words.append(x[:-1])
+    green_word = ["+", "+", "+", "+", "+"]
     
     while True:
         print("Input 5 letter word:")
@@ -13,7 +14,7 @@ def main():
             sys.exit()
         print("Input type: g for green, y for yellow, b for black:")
         result_input = input()
-        green_word = ["+", "+", "+", "+", "+"]
+        
 
         for i in range(0, 5):
             if result_input[i] == "b":
@@ -29,7 +30,7 @@ def main():
             elif result_input[i] == "g":
                 if word_input[i] == green_word[i]:
                     print("already checked")
-                    break
+                    continue
                 for word in words[:]:
 
                     green_word[i] = word_input[i]
