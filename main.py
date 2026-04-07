@@ -10,7 +10,7 @@ def main():
     while True:
         print("Input 5 letter word:")
         word_input = input()
-        if word_input == "aaaaa":
+        if word_input == "exit":
             sys.exit()
         print("Input type: g for green, y for yellow, b for black:")
         result_input = input()
