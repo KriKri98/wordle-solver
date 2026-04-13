@@ -32,7 +32,6 @@ def main():
                     print("already checked")
                     continue
                 for word in words[:]:
-
                     green_word[i] = word_input[i]
                     if word_input[i] != word[i]:
                         words.remove(word)
